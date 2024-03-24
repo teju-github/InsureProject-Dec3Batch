@@ -33,8 +33,8 @@ pipeline {
     }
     stage('DockerLogin') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'f22596dd-82da-477f-b4e4-5957d9cda28b', passwordVariable: '7022760426', usernameVariable: 'tejaswini')]) {
-        sh "docker login -u ${env.tejaswini}-p ${env.7022760426}"
+        withCredentials([usernamePassword(credentialsId: 'f22596dd-82da-477f-b4e4-5957d9cda28b', passwordVariable: 'tejaswinipass', usernameVariable: 'tejaswini')]) {
+        sh "docker login -u ${env.tejaswini} -p ${env.tejaswinipass}"
 }
             }
     }
